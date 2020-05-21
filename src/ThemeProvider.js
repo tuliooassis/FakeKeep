@@ -6,9 +6,11 @@ import theme from './config/theme';
 export const ThemeProviderContext = createContext();
 
 export default ({ children }) => {
-    const { activeTheme } = useContext(ThemeProviderContext);
+  const { activeTheme } = useContext(ThemeProviderContext);
 
-    return <ThemeProvider theme={theme[activeTheme]}>
-        {children}
+  return (
+    <ThemeProvider theme={theme[activeTheme]}>
+      {children}
     </ThemeProvider>
+  );
 };

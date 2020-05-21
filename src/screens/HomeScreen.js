@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
-import {ThemeContext} from 'styled-components';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import ActionButton from 'react-native-action-button';
 
+import { FlatList } from 'react-native-gesture-handler';
 import Item from '../components/Item';
-import ViewContainer from './../components/ViewContainer';
+import ViewContainer from '../components/ViewContainer';
 import ChangeThemeButton from '../components/ChangeThemeButton';
-import {FlatList} from 'react-native-gesture-handler';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   const theme = useContext(ThemeContext);
 
   const goToAddNoteScreen = () => {
@@ -54,9 +54,9 @@ const HomeScreen = ({navigation}) => {
 
       <FlatList
         data={items}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         numColumns="2"
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <Item title={item.title} content={item.content} />
         )}
       />

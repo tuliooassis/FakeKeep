@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 
-import { StatusBar } from "react-native"
-import { ThemeProviderContext } from '../ThemeProvider';
+import { StatusBar } from 'react-native';
 import { ThemeContext } from 'styled-components';
 
 export default () => {
-    const theme = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
 
-    return <StatusBar barStyle={theme.barStyle} translucent/>;
-}
+  return <StatusBar barStyle={theme.barStyle} translucent />;
+};
