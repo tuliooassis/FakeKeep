@@ -8,9 +8,5 @@ export const ThemeProviderContext = createContext();
 export default ({ children }) => {
   const { activeTheme } = useContext(ThemeProviderContext);
 
-  return (
-    <ThemeProvider theme={theme[activeTheme]}>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={theme[activeTheme]}>{children}</ThemeProvider>;
 };

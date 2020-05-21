@@ -7,9 +7,9 @@
 //   SafeAreaProvider,
 // } from 'react-native-safe-area-context';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import ThemeProvider, {ThemeProviderContext} from './ThemeProvider';
+import ThemeProvider, { ThemeProviderContext } from './ThemeProvider';
 
 import StatusBar from './components/StatusBar';
 import MainStack from './routes/MainStack';
@@ -18,7 +18,7 @@ const App = () => {
   const [activeTheme, setActiveTheme] = useState('light');
 
   return (
-    <ThemeProviderContext.Provider value={{activeTheme, setActiveTheme}}>
+    <ThemeProviderContext.Provider value={{ activeTheme, setActiveTheme }}>
       <ThemeProvider>
         <StatusBar />
         <MainStack />
